@@ -8,7 +8,7 @@ class ControladorUsuarios{
         $this->usuario = new Usuarios();
     }
 
-    public function __listar() {
+    public function listar() {
         $listar = $this->usuario->listar();
         return $listar;
     }

@@ -1,7 +1,6 @@
 <?php
-    $controlador = new Controlador();
-    $resultado = $controlador -> index();
-
+    $controlador = new ControladorUsuarios();
+    $resultado = $controlador->listar();
 ?>
 
 <h1> Modulo Home </h1>
@@ -26,7 +25,24 @@
         </tr>
     </thead>
     <tbody> <!--CUERPO DE LA TABLA-->
-        <tr> <!--USUARIO 1-->
+        <?php
+        
+            while($fila = mysqli_fetch_array($resultado)){
+                echo "<tr>";
+                echo "<td>".$fila["idusuarios"]."</td>";
+                echo "<td>".$fila["nombres"]."</td>";
+                echo "<td>".$fila["apellidos"]."</td>";
+                echo "<td>".$fila["cedula"]."</td>";
+                echo "<td>".$fila["usuario"]."</td>";
+                echo "<td>".$fila["password"]."</td>";
+                echo "<td> <a href='?cargar=consultar&id=".$fila["idusuarios"]."'>Consultar</a> 
+                    <a href='?cargar=editar&id=".$fila["idusuarios"]."'>Editar</a> 
+                    <a href='?cargar=eliminar&id=".$fila["idusuarios"]."'>Eliminar</a>";
+                echo "</tr>";
+            }
+        
+        ?>
+        <!-- <tr>
             <td>1</td>
             <td>Juan</td>
             <td>Pérez</td>
@@ -39,7 +55,7 @@
                 <a href="?cargar=eliminar">Eliminar</a>
             </td>
         </tr>
-        <tr> <!--USUARIO 2-->
+        <tr> 
             <td>2</td>
             <td>María</td>
             <td>Gómez</td>
@@ -51,7 +67,7 @@
                 <a href="?cargar=editar">Editar</a>
                 <a href="?cargar=eliminar">Eliminar</a>
             </td>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
 </body>
