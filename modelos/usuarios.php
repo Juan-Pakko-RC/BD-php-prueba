@@ -44,6 +44,24 @@ class Usuarios{
         }
     }
 
+    public function consultar() {
+
+        $sql="SELECT * FROM usuarios WHERE idusuarios='$this->idusuarios'";
+        // echo $sql;
+        $resultado=$this->con->consultaRetorno($sql);
+        $registro=mysqli_fetch_assoc($resultado);
+
+        // $this->idusuarios=$registro["idusuarios"];
+        // $this->nombres=$registro["nombres"];
+        // $this->apellidos=$registro["apellidos"];
+        // $this->cedula=$registro["cedula"];
+        // $this->usuario=$registro["usuario"];
+        // $this->password=$registro["password"];
+
+        return $registro;
+
+    }
+
 
 }// Fin de la clase usuarios
 

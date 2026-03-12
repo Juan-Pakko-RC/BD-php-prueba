@@ -24,6 +24,13 @@ class ControladorUsuarios{
         return $resultado;
     }
 
+    public function consultar($id) {
+
+        $this->usuario->set("idusuarios", $id);
+
+        return $this->usuario->consultar();
+    }
+
 }
 
 ?>
