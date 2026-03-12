@@ -17,7 +17,7 @@
                 echo "Fallo en la conexion a $this->db";
             }
             else{
-                echo "La conexion a $this->db fue exitosa";
+                echo "Connected to $this->db";
             }
 
         } // fin del constructor

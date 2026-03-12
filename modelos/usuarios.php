@@ -24,6 +24,26 @@ class Usuarios{
         return $resultado;
     }
 
+    public function set($atributo, $valor) {
+        $this->$atributo=$valor;
+    }
+
+    public function crear() {
+
+        $sql2= "SELECT * FROM usuarios WHERE cedula='$this->cedula'";
+        $resultado=$this->con->consultaRetorno($sql2);
+        $filas=mysqli_num_rows($resultado);
+
+        if ($filas==0) {
+            $sql="INSERT INTO usuarios (nombres, apellidos, cedula, usuario, password)
+            VALUES('$this->nombres', '$this->apellidos', '$this->cedula', '$this->usuario', '$this->password')";
+            $this->con->consultaSimple($sql);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }// Fin de la clase usuarios
 
