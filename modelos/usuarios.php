@@ -74,7 +74,7 @@ class Usuarios{
 
     public function editar () {
 
-        $sql="UPDATE usuarios SET nombres='$this->nombres', apellidos='$this->apellidos, cedula='$this->cedula', usuario='$this->usuario', password='$this->password')
+        $sql="UPDATE usuarios SET nombres='$this->nombres', apellidos='$this->apellidos, cedula='$this->cedula', usuario='$this->usuario', password='$this->password'
         WHERE idusuarios='$this->idusuarios'";
         $this->con->consultaSimple($sql);
 

@@ -36,7 +36,7 @@
     $controlador=new ControladorUsuarios();
 
     if (isset ($_POST["editar"])) {
-        $controlador->editar($_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
+        $controlador->editar($_GET["idusuarios"], $_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
         // header('location:home.php');
 
         if ($resultado) {
