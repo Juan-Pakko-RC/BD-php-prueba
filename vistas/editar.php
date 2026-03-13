@@ -13,19 +13,19 @@
 <form action="" method="post">
 
     <label for="">Nombres</label><br>
-    <input type="text" name="nombres" value="<?php echo $registro["nombres"]; ?>"><br>
+    <input type="text" name="nombres" value="<?php echo $registro['nombres']; ?>"><br>
 
     <label for="">Apellidos</label><br>
-    <input type="text" name="apellidos" value="<?php echo $registro["apellidos"]; ?>"><br>
+    <input type="text" name="apellidos" value="<?php echo $registro['apellidos']; ?>"><br>
     
     <label for="">Cédula</label><br>
-    <input type="text" name="cedula" value="<?php echo $registro["cedula"]; ?>"><br>
+    <input type="text" name="cedula" value="<?php echo $registro['cedula']; ?>"><br>
 
     <label for="">Usuario</label><br>
-    <input type="text" name="usuario" value="<?php echo $registro["usuario"]; ?>"><br>
+    <input type="text" name="usuario" value="<?php echo $registro['usuario']; ?>"><br>
 
     <label for="">Password</label><br>
-    <input type="text" name="password" value="<?php echo $registro["password"]; ?>"><br>
+    <input type="text" name="password" value="<?php echo $registro['password']; ?>"><br>
 
     <input type="submit" name="editar" value="Editar Usuario">
 
@@ -36,10 +36,10 @@
     $controlador=new ControladorUsuarios();
 
     if (isset ($_POST["editar"])) {
-        $controlador->editar($_GET["idusuarios"], $_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
-        // header('location:home.php');
+        $controlador->editar($_GET["id"], $_POST["nombres"], $_POST["apellidos"], $_POST["cedula"], $_POST["usuario"], $_POST["password"]);
+        //header('location:index.php');
 
-        if ($resultado) {
+        if (true) {
             echo "Usuario editado exitosamente";
         } else {
             echo "Actualzación de datos fallida";

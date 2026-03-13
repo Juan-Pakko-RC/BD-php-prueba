@@ -39,6 +39,7 @@ class ControladorUsuarios{
     }
 
     public function editar($idusuarios, $nombres, $apellidos, $cedula, $usuario, $password) {
+
         $this->usuario->set("idusuarios", $idusuarios);
         $this->usuario->set("nombres", $nombres);
         $this->usuario->set("apellidos", $apellidos);

@@ -27,7 +27,7 @@
 
     if (isset ($_POST["eliminar"])) {
         $controlador->eliminar($_GET["id"]);
-        header('location:home.php');
+        header('location:index.php');
     }
 
 ?>
