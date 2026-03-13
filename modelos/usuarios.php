@@ -68,7 +68,15 @@ class Usuarios{
         // echo $sql;
         $resultado=$this->con->consultaSimple($sql);
         // $registro=mysqli_fetch_assoc($resultado);
-        echo "Usuario eliminado exitosamente";
+        // echo "Usuario eliminado exitosamente";
+
+    }
+
+    public function editar () {
+
+        $sql="UPDATE usuarios SET nombres='$this->nombres', apellidos='$this->apellidos, cedula='$this->cedula', usuario='$this->usuario', password='$this->password')
+        WHERE idusuarios='$this->idusuarios'";
+        $this->con->consultaSimple($sql);
 
     }
 
