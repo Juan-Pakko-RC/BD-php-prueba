@@ -62,6 +62,16 @@ class Usuarios{
 
     }
 
+    public function eliminar() {
+
+        $sql="DELETE FROM usuarios WHERE idusuarios='$this->idusuarios'";
+        // echo $sql;
+        $resultado=$this->con->consultaSimple($sql);
+        // $registro=mysqli_fetch_assoc($resultado);
+        echo "Usuario eliminado exitosamente";
+
+    }
+
 
 }// Fin de la clase usuarios
 
