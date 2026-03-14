@@ -5,7 +5,7 @@
 
     if (isset($_GET["id"])) {
 
-        $registro=$controlador->consultar($_GET["id"]);
+        $registro=$controlador->ctrConsultar($_GET["id"]);
     }
 
 ?>
@@ -36,7 +36,7 @@
     $controlador=new ControladorUsuarios();
 
     if (isset ($_POST["editar"])) {
-        $controlador->editar($_GET["id"], $_POST["nombres"], $_POST["apellidos"], $_POST["cedula"], $_POST["usuario"], $_POST["password"]);
+        $controlador->ctrEditar($_GET["id"], $_POST["nombres"], $_POST["apellidos"], $_POST["cedula"], $_POST["usuario"], $_POST["password"]);
         //header('location:index.php');
 
         if (true) {

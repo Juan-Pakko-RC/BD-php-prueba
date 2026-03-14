@@ -25,7 +25,7 @@
 
     $controlador=new ControladorUsuarios();
     if (isset ($_POST["enviar"])) {
-        $resultado=$controlador->crear($_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
+        $resultado=$controlador->ctrCrear($_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["password"]);
 
         if ($resultado) {
             echo "Registro agregado exitosamente";

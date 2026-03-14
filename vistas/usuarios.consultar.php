@@ -5,7 +5,7 @@
 
     if (isset($_GET["id"])) {
 
-        $registro=$controlador->consultar($_GET["id"]);
+        $registro=$controlador->ctrConsultar($_GET["id"]);
     }
 
 ?>

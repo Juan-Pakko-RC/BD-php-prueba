@@ -1,6 +1,6 @@
 <?php
     $controlador = new ControladorUsuarios();
-    $resultado = $controlador->listar();
+    $resultado = $controlador->ctrListar();
 ?>
 
 <h1> Modulo Home </h1>

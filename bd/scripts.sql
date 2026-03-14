@@ -1,3 +1,5 @@
+-- RECUPERACIÓN DE TABLA DE DATOS USUARIOS
+
 CREATE TABLE usuarios (
     idusuarios INT NOT NULL AUTO_INCREMENT,
     nombres VARCHAR(45) NOT NULL,
@@ -63,3 +65,35 @@ INSERT INTO usuarios (idusuarios, nombres, apellidos, cedula, usuario, password)
 (48,'Diana','Zamora','10000048','dzamora','pass123'),
 (49,'Esteban','Mejia','10000049','emejia','pass123'),
 (50,'Paola','Benitez','10000050','pbenitez','pass123');
+
+-- RECUPERACIÓN DE TABLA DE PRODUCTOS
+
+CREATE TABLE productos_electronicos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_producto VARCHAR(255) NOT NULL,
+    stock INT,
+    precio DECIMAL(10,2) CHECK (precio > 0),
+    categoria VARCHAR(100)
+);
+
+INSERT INTO productos_electronicos (nombre_producto, stock, precio, categoria) VALUES
+('Laptop Dell Inspiron 15', 10, 899.99, 'Laptops'),
+('Mouse Inalámbrico Logitech', 50, 25.99, 'Accesorios'),
+('Teclado Mecánico Redragon', 30, 59.99, 'Accesorios'),
+('Monitor Samsung 24 pulgadas', 15, 179.99, 'Monitores'),
+('Smartphone Samsung Galaxy A54', 20, 399.99, 'Celulares'),
+('Tablet Lenovo Tab M10', 12, 229.99, 'Tablets'),
+('Audífonos Bluetooth Sony', 25, 129.99, 'Audio'),
+('Disco Duro Externo 1TB Seagate', 18, 64.99, 'Almacenamiento'),
+('Memoria USB 64GB Kingston', 40, 12.99, 'Almacenamiento'),
+('Cargador USB-C Anker', 35, 19.99, 'Accesorios'),
+('Webcam Logitech C920', 14, 89.99, 'Periféricos'),
+('Impresora HP DeskJet 2775', 8, 99.99, 'Impresoras'),
+('Router WiFi TP-Link AC1200', 16, 49.99, 'Redes'),
+('Smartwatch Xiaomi Mi Watch', 22, 149.99, 'Wearables'),
+('Altavoz Bluetooth JBL Flip 6', 19, 119.99, 'Audio'),
+('Tarjeta MicroSD 128GB SanDisk', 45, 21.99, 'Almacenamiento'),
+('Laptop HP Pavilion 14', 9, 749.99, 'Laptops'),
+('Monitor LG UltraWide 29 pulgadas', 7, 299.99, 'Monitores'),
+('Teclado Inalámbrico Microsoft', 28, 34.99, 'Accesorios'),
+('Cámara de Seguridad Xiaomi', 13, 59.99, 'Seguridad');

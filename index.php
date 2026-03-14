@@ -1,5 +1,5 @@
 <?php
-    include_once("controladores/controlador.php");
+    include_once("controladores/usuarios.controlador.php");
     include_once("controladores/enrutador.php");
 ?>
 <!DOCTYPE html>
@@ -16,9 +16,9 @@
             <!--<li><a href="index.php">index</a></li>-->
             <li><a href="?cargar=home">Home</a></li>
             <li><a href="?cargar=crear">Registrar</a></li>
-            <li><a href="?cargar=editar">Editar</a></li>
+            <!-- <li><a href="?cargar=editar">Editar</a></li>
             <li><a href="?cargar=consultar">Consultar</a></li>
-            <li><a href="?cargar=eliminar">Eliminar</a></li>
+            <li><a href="?cargar=eliminar">Eliminar</a></li> -->
         </ul>
     </nav>
     <?php

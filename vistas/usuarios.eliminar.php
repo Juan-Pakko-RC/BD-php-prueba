@@ -5,7 +5,7 @@
 
     if (isset($_GET["id"])) {
 
-        $registro=$controlador->consultar($_GET["id"]);
+        $registro=$controlador->ctrConsultar($_GET["id"]);
     }
 
 ?>
@@ -26,7 +26,7 @@
 <?php
 
     if (isset ($_POST["eliminar"])) {
-        $controlador->eliminar($_GET["id"]);
+        $controlador->ctrEliminar($_GET["id"]);
         header('location:index.php');
     }
 
